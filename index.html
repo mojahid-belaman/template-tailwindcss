@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS</title>
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/all.min.css">
+    <link rel="stylesheet" href="/dist/output.css" />
   </head>
   <body>
-    <nav class="container mx-auto p-6">
+    <nav class="container px-5 py-6 mx-auto">
       <div class="flex items-center justify-between">
         <div>
           <img
@@ -18,7 +19,7 @@
             height="200"
           />
         </div>
-        <ul class="hidden md:flex md:items-center space-x-8">
+        <ul class="hidden space-x-8 md:flex md:items-center">
           <li class="text-slate-900 hover:text-slate-400">
             <a href="#">Portfolio</a>
           </li>
@@ -32,7 +33,31 @@
             <a href="#">Social</a>
           </li>
           <li
-            class="py-2 px-8 rounded-full text-white bg-orange-500 hover:bg-slate-900 transition-colors"
+            class="px-8 py-2 text-white transition-colors bg-orange-500 rounded-full hover:bg-slate-900"
+          >
+            <a href="#">Call Me</a>
+          </li>
+        </ul>
+        <button id="btn-menu" class="md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div id="menu" class="md:hidden">
+        <ul class="absolute font-bold flex flex-col items-center space-y-4 bg-gray-50 border border-slate-200 py-8 left-14 right-14 drop-shadow-lg">
+          <li class="text-slate-900 hover:text-slate-400">
+            <a href="#">Portfolio</a>
+          </li>
+          <li class="text-slate-900 hover:text-slate-400">
+            <a href="#">About</a>
+          </li>
+          <li class="text-slate-900 hover:text-slate-400">
+            <a href="#">Contact</a>
+          </li>
+          <li class="text-slate-900 hover:text-slate-400">
+            <a href="#">Social</a>
+          </li>
+          <li
+            class="px-8 py-2 text-white transition-colors bg-orange-500 rounded-full hover:bg-slate-900"
           >
             <a href="#">Call Me</a>
           </li>
@@ -40,11 +65,11 @@
       </div>
     </nav>
     <section>
-      <div class="container mx-auto p-6 flex flex-col-reverse md:flex-row">
+      <div class="container flex flex-col-reverse px-5 py-6 mx-auto md:flex-row">
         <div
-          class="md:w-1/2 text-center md:text-left flex flex-col justify-center space-y-5"
+          class="flex flex-col justify-center space-y-5 text-center md:w-1/2 md:text-left"
         >
-          <h1 class="text-3xl md:text-5xl font-bold">
+          <h1 class="text-3xl font-bold md:text-5xl">
             Rapidly build modern websites without ever leaving your HTML.
           </h1>
           <p>
@@ -53,7 +78,7 @@
             directly in your markup.
           </p>
           <a
-            class="py-2 px-8 rounded-full text-white bg-orange-500 hover:bg-slate-900 self-center md:self-start transition-colors"
+            class="self-center px-8 py-2 text-white transition-colors bg-orange-500 rounded-full hover:bg-slate-900 md:self-start"
             href="#"
             >Get Started</a
           >
@@ -64,8 +89,8 @@
       </div>
     </section>
     <section>
-      <div class="container mx-auto my-32 text-center">
-        <h2 class="text-3xl font-bold mb-5">
+      <div class="container mx-auto px-5 py-6 my-32 text-center">
+        <h2 class="mb-5 text-3xl font-bold">
           “Best practices” don’t actually work.
         </h2>
         <p class="max-w-5xl mx-auto">
@@ -75,31 +100,51 @@
           suppress the urge to retch long enough to give it a chance, I really
           think you’ll wonder how you ever worked with CSS any other way.
         </p>
-        <div class="mt-10 flex flex-col space-y-5 space-x-0 md:flex-row md:space-x-5 md:space-y-0">
-          <div class="w-full md:w-1/3 p-6 border border-slate-300 rounded-lg flex flex-col space-y-2 items-center bg-slate-100">
-            <img src="./dist/images/adam.jpg" alt="Adam" class="rounded-full" width="100" height="100" />
-            <h2 class="font-bold text-lg">Adam Sandler</h2>
-            <p class="leading-6">
+        <div
+          class="flex flex-col mt-14 space-x-0 space-y-14 md:flex-row md:space-x-5 md:space-y-0"
+        >
+          <div
+            class="flex flex-col items-center w-full p-6 space-y-2 border rounded-lg md:w-1/3 border-slate-300 bg-slate-100"
+          >
+            <img
+              src="./dist/images/adam.jpg"
+              alt="Adam"
+              class="w-20 h-20 -mt-16 rounded-full"
+            />
+            <h2 class="text-lg font-bold">Adam Sandler</h2>
+            <p class="leading-6 text-gray-500">
               The way I wrote it changed frequently. It’s not a coincidence
               Tailwind was released the same year. It might look wrong, but
               spend time with it and you’ll realize semantic CSS was a 20 year
               mistake.
             </p>
           </div>
-          <div class="w-full md:w-1/3 p-6 border border-slate-300 rounded-lg flex flex-col space-y-2 items-center bg-slate-100">
-            <img src="./dist/images/sara.jpg" alt="Adam" class="rounded-full" width="100" height="100" />
-            <h2 class="font-bold text-lg">Adam Sandler</h2>
-            <p class="leading-6">
+          <div
+            class="flex flex-col items-center w-full p-6 space-y-2 border rounded-lg md:w-1/3 border-slate-300 bg-slate-100"
+          >
+            <img
+              src="./dist/images/sara.jpg"
+              alt="Adam"
+              class="w-20 h-20 -mt-16 rounded-full"
+            />
+            <h2 class="text-lg font-bold">Madeline Bauer</h2>
+            <p class="leading-6 text-gray-500">
               The way I wrote it changed frequently. It’s not a coincidence
               Tailwind was released the same year. It might look wrong, but
               spend time with it and you’ll realize semantic CSS was a 20 year
               mistake.
             </p>
           </div>
-          <div class="w-full md:w-1/3 p-6 border border-slate-300 rounded-lg flex flex-col space-y-2 items-center bg-slate-100">
-            <img src="./dist/images/adam.jpg" alt="Adam" class="rounded-full" width="100" height="100" />
-            <h2 class="font-bold text-lg">Adam Sandler</h2>
-            <p class="leading-6">
+          <div
+            class="flex flex-col items-center w-full p-6 space-y-2 border rounded-lg md:w-1/3 border-slate-300 bg-slate-100"
+          >
+            <img
+              src="./dist/images/adam.jpg"
+              alt="Adam"
+              class="w-20 h-20 -mt-16 rounded-full"
+            />
+            <h2 class="text-lg font-bold">Adam Sandler</h2>
+            <p class="leading-6 text-gray-500">
               The way I wrote it changed frequently. It’s not a coincidence
               Tailwind was released the same year. It might look wrong, but
               spend time with it and you’ll realize semantic CSS was a 20 year
@@ -109,5 +154,40 @@
         </div>
       </div>
     </section>
+    <footer class="container mx-auto bg-slat">
+      <div class="text-white px-5 py-20 flex flex-col items-center md:items-start space-x-0 space-y-10 md:space-y-0 md:flex-row md:justify-between">
+        <div class="flex flex-col items-center justify-between space-y-8 md:space-y-3 md:items-start">
+          <p>Copyright © 2023, All Rights Reserved</p>
+          <img src="./dist/images/tailwindcss.png" alt="Logo" width="200" height="200" />
+          <div class="flex space-x-3">
+            <a href="#"><i class="fa-brands fa-facebook text-3xl"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube text-3xl"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter text-3xl"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin text-3xl"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram text-3xl"></i></a>
+          </div>
+        </div>
+        <div class="flex flex-row space-x-10">
+          <div class="flex flex-col space-y-3">
+            <a href="#" class="hover:text-slate-300">Home</a>
+            <a href="#" class="hover:text-slate-300">About</a>
+            <a href="#" class="hover:text-slate-300">Contact</a>
+          </div>
+          <div class="flex flex-col space-y-3">
+            <a href="#" class="hover:text-slate-300">Imprint</a>
+            <a href="#" class="hover:text-slate-300">Privacy</a>
+            <a href="#" class="hover:text-slate-300">Credits</a>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between space-y-10 md:space-y-20">
+          <div class="flex space-x-4">
+            <input type="email" placeholder="Subscribe To NewsLette" class="px-5 py-2 rounded-full flex-1" />
+            <a href="#" class="px-8 py-2 text-white transition-colors bg-orange-500 rounded-full hover:bg-slate-300">Go</a>
+          </div>
+          <p>Copyright © 2023, All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./dist/index.js"></script>
   </body>
 </html>
